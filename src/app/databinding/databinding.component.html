@@ -1,0 +1,25 @@
+<p>databinding works!</p>
+
+<!-- Event Binding -->
+<button (click)="click()">click me</button>
+
+<input type="text"(keyup)="submit()">
+
+<!-- Interpolation -->
+<h1>Name:{{name}}</h1>  
+<h3>Age:{{age}}</h3>
+
+<!-- Property Binding [] -->
+<button [disabled]="isData">submit</button><br>
+
+<!-- Two way Data binding [(ng model)] -->
+<input type="text" [(ngModel)]="mobile" (keyup)="submit()">
+
+<!-- Calculator -->
+ <h1>Calculator</h1>
+ <h3>{{result}}</h3>
+ <label>Number 1:</label>
+ <input  type="number"[(ngModel)]="num1"><br>
+ <label>Number 2:</label>
+ <input type="number" [(ngModel)]="num2"><br>
+ <button (click)="add()" [disabled]="!num1|| !num2">Add</button>

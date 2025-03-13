@@ -1,0 +1,47 @@
+/* .parent{
+    background-color: gray;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    text-align: center; 
+    align-items: center;
+ }
+.cl{
+    background-color: rgb(243, 158, 158);
+    height: 30%;
+    width: 30%;
+    padding: 10%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10%;
+   
+}
+.container {
+    text-align: center;
+    margin-top: 50px;
+  }
+  
+  button {
+    margin: 5px;
+    padding: 5px 10px;
+    font-size: 16px;
+    cursor: pointer;
+  } */
+
+  .container {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  input {
+    margin: 5px;
+    padding: 5px;
+  }
+  
+  button {
+    margin: 5px;
+    padding: 8px 15px;
+    cursor: pointer;
+  }

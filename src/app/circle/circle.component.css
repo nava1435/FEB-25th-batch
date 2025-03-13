@@ -1,0 +1,21 @@
+.parent{
+    background-color: gray;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    /* text-align: center; */
+    align-items: center;
+    
+}
+.container{
+    background-color: violet;
+    height: 30%;
+    width: 30%;
+    padding: 10%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+   
+}
