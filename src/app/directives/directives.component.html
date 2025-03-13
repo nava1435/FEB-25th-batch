@@ -1,0 +1,41 @@
+<h1>Products</h1>
+
+<table border="20px">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Price</th>
+      <th>Rating</th>
+    </tr>
+  </thead>
+
+  <!-- Same like a loop by using _________ *ngFor=" " -->
+  <tbody>
+    <tr *ngFor="let product of products">
+      <td>{{ product.name }}</td>
+      <td>{{ product.price }}</td>
+      <td>{{ product.rating }}</td>
+    </tr>
+  </tbody>
+<!-- ____________________________________________ -->
+</table>
+
+<ol>
+  <li *ngFor="let state of states">{{ state }}</li>
+</ol>
+
+<!-- <ul>
+  <li *ngFor="let state of states">{{ state }}></li>
+</ul> -->
+<ul>
+    <li *ngFor="let state of states">{{state}}</li>
+</ul>
+<select>
+
+    <option *ngFor="let state of states">{{state}}</option>
+</select>
+
+<!--___________________ ngIf Visible -->
+
+<p *ngIf="!isVisible">Welcome To Mohit IT</p>
+<p *ngIf="isVisible">Thanks you for joining</p>

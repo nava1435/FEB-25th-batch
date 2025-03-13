@@ -11,6 +11,7 @@ import { CircleComponent } from './circle/circle.component';
 import { HomeComponent } from './home/home.component';
 import { BmiComponent } from './bmi/bmi.component';
 import { EmiComponent } from './emi/emi.component';
+import { DirectivesComponent } from './directives/directives.component';
 
 
 
@@ -35,6 +36,10 @@ const routes: Routes = [{path:'dashboard',component:DashboardComponent,children:
 
   {path:'dashboard',component:DashboardComponent,children:[
     {path:'bmi',component:BmiComponent, },
+  ]},
+
+  {path:'dashboard',component:DashboardComponent,children:[
+    {path:'directives',component:DirectivesComponent, },
   ]},
   // {path:'bmi',component:BmiComponent,children:[
   //   {path:'bmi',component:BmiComponent, },

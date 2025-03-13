@@ -15,5 +15,6 @@
     width: 80%;
     height: 100%;
     background-color: violet;
-    
+    overflow: auto;
+    /* overflow: hidden; */
 }

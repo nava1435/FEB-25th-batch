@@ -19,6 +19,7 @@ import { HeaderComponent } from './header/header.component';
 import { FormsModule } from '@angular/forms';
 import { BmiComponent } from './bmi/bmi.component';
 import { EmiComponent } from './emi/emi.component';
+import { DirectivesComponent } from './directives/directives.component';
 
 
 // import { EMIComponent } from './emi/emi.component';
@@ -39,6 +40,7 @@ import { EmiComponent } from './emi/emi.component';
   HeaderComponent, 
   DatabindingComponent, 
   EmiComponent, 
+  DirectivesComponent, 
 
 
   ],
