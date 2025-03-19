@@ -8,10 +8,16 @@ import { DatabindingComponent } from './databinding/databinding.component';
 import { CalculatorComponent } from './calculator/calculator.component';
 import { RectangleComponent } from './rectangle/rectangle.component';
 import { CircleComponent } from './circle/circle.component';
-import { HomeComponent } from './home/home.component';
 import { BmiComponent } from './bmi/bmi.component';
 import { EmiComponent } from './emi/emi.component';
 import { DirectivesComponent } from './directives/directives.component';
+import { EmployeeComponent } from './employee/employee.component';
+import { VehicleComponent } from './vehicle/vehicle.component';
+import { FlipkartComponent } from './flipkart/flipkart.component';
+import { AccountComponent } from './account/account.component';
+import { MailComponent } from './mail/mail.component';
+import { WeatherComponent } from './weather/weather.component';
+
 
 
 
@@ -39,6 +45,10 @@ const routes: Routes = [{path:'dashboard',component:DashboardComponent,children:
   ]},
 
   {path:'dashboard',component:DashboardComponent,children:[
+    {path:'employee',component:EmployeeComponent, },
+  ]},
+
+  {path:'dashboard',component:DashboardComponent,children:[
     {path:'directives',component:DirectivesComponent, },
   ]},
   // {path:'bmi',component:BmiComponent,children:[
@@ -49,9 +59,35 @@ const routes: Routes = [{path:'dashboard',component:DashboardComponent,children:
   ]},
 
 
+  // {path:'dashboard',component:DashboardComponent,children:[
+  //   {path:'home',component:HomeComponent}
+  // ]},
   {path:'dashboard',component:DashboardComponent,children:[
-    {path:'home',component:HomeComponent}
+    {path:'vehicle', component:VehicleComponent},
   ]},
+
+  {path:'dashboard',component:DashboardComponent,children:[
+    {path:'flipkart', component:FlipkartComponent},
+  ]},
+
+
+  {path:'dashboard',component:DashboardComponent,children:[
+    {path:'account',component:AccountComponent}
+  ]},
+  {path:'dashboard',component:DashboardComponent,children:[
+    {path:'weather',component:WeatherComponent}
+  ]},
+
+
+
+
+
+  {path:'dashboard',component:DashboardComponent,children:[
+    {path:'mail',component:MailComponent}
+  ]},
+
+
+
 
   {path:'**',component:ErrorComponent},//wild-card componet
 
@@ -62,8 +98,3 @@ const routes: Routes = [{path:'dashboard',component:DashboardComponent,children:
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
-
-
-
-
-  

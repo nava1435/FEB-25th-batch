@@ -8,7 +8,8 @@
 .left{
     width: 20%;
     height: 100%;
-    background-color: antiquewhite;
+    background-color:orangered;
+    overflow: auto;
 }
 
 .right{

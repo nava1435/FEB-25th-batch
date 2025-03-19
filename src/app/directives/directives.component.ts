@@ -20,5 +20,6 @@ states:string[]=['Andra pradesh','karnataka','Kerala','Maharastra','Tamilanadu',
     {name:'bike',price:10000,rating:3.7},
     {name:'car',price:100000,rating:3.7},
   ]
-
+  newDate:any=new Date();
+                                                                                        
 }

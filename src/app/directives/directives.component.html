@@ -8,15 +8,24 @@
       <th>Rating</th>
     </tr>
   </thead>
+<!--============================================================= -->
+<!-- Same like a loop by using _________ *ngFor=" " -->
 
-  <!-- Same like a loop by using _________ *ngFor=" " -->
+  <tr *ngFor="let product of products">
+    <td>{{ product.name }}</td>
+    <td>{{ product.price }}</td>
+    <td>{{ product.rating }}</td>
+  </tr>
+<!--=============================================================  -->
   <tbody>
     <tr *ngFor="let product of products">
-      <td>{{ product.name }}</td>
-      <td>{{ product.price }}</td>
-      <td>{{ product.rating }}</td>
+        <td>{{product.name | uppercase }}</td>
+        <td [ngStyle]="{'color':product.price<2000 ? 'green':'red'}">{{product.price}}</td>
+        <td [ngClass]="{'green':product.rating>4,'plum':product.rating<2, 'pink':product.rating>2&&product.rating<4}">
+            {{product.rating}}
+        </td>
     </tr>
-  </tbody>
+</tbody>
 <!-- ____________________________________________ -->
 </table>
 
@@ -39,3 +48,6 @@
 
 <p *ngIf="!isVisible">Welcome To Mohit IT</p>
 <p *ngIf="isVisible">Thanks you for joining</p>
+
+<!-- pipes -->
+<h1>{{newDate | date:'yyyy-MM-dd' }}</h1>

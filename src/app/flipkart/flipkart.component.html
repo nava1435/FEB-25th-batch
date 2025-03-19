@@ -1,0 +1,89 @@
+<!-- 
+
+
+<label > product:</label>
+<input placeholder="search" type="text" [(ngModel)]="name"><br>
+
+<label>Price low to high</label>
+<input type="text" [(ngModel)]="experience"><br>
+
+<label>Rating</label>
+<input type="text" [(ngModel)]="products"><br>
+
+<label>product Role</label>
+<input type="text" [(ngModel)]="empRole"><br>
+
+<button (click)="create()">Create product</button><br><br>
+
+<input
+  type="text"
+  placeholder="name"
+  [(ngModel)]="term"
+  (keyup)="search()"
+/>
+Map
+<button (click)="map()">Price</button>
+Sort
+<- <button (click)="sort()">Rating</button>
+<button (click)="sort()">Free Delivery</button>
+<button (click)="sort()">Actions</button> -->
+
+
+
+<!-- <select [(ngModel)]="role" (change)="filter()">
+  <option>UIDeveloper</option>
+  <option>Software Developer</option>
+  <option>Data Developer</option>
+  <option>Testing Engineer</option>
+</select> -->
+<!-- Reduce -->
+<!-- <button (click)="reduce()">Cost To Company</button>
+
+<table border="1" [cellPadding]="10" [cellPadding]="0">
+  <thead>
+    <tr>
+      <th>S No</th>
+      <th>Product Name</th>
+      <th>Price</th>
+      <th>Rating</th>
+      <th>Free Delivery</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr *ngFor="let product of products; let i = index">
+      <td>{{ i + 1 }}</td>
+      <td>{{i+1}}</td> -->
+      <!-- <td>{{ product.name }}</td> -->
+      <!-- <td>{{ product.experience }}</td>
+      <td>{{ product.package }}</td>
+      <td>{{ product.role }}</td>
+      <td>
+        <button (click)="delete(i)">Delete</button>
+      </td>
+    </tr>
+  </tbody> -->
+<!-- </table>
+ --> 
+ <div class="flipkart-dashboard">
+  <h1> Flipkart </h1>
+  <table>
+    <tr>
+      <th>S.No</th>
+      <th>Product Name</th>
+      <th>Price</th>
+      <th>Rating</th>
+      <th>Free Delivery</th>
+      <th>Actions</th>
+    </tr>
+    <tr *ngFor="let item of productList; let i = index">
+      <td>{{ i + 1 }}</td>
+      <td>{{ item.name }}</td>
+      <td>{{ item.price }}</td>
+      <td>{{ item.rating }}</td>
+      <td>{{ item.freeDelivery ? 'Yes' : 'No' }}</td>
+      <td><button (click)="deleteItem(i)">Delete</button></td>
+    </tr>
+  </table>
+</div>
