@@ -14,7 +14,7 @@ import { CalculatorComponent } from './calculator/calculator.component';
 import { RectangleComponent } from './rectangle/rectangle.component';
 import { CircleComponent } from './circle/circle.component';
 
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BmiComponent } from './bmi/bmi.component';
 import { EmiComponent } from './emi/emi.component';
 import { DirectivesComponent } from './directives/directives.component';
@@ -27,6 +27,11 @@ import { AccountComponent } from './account/account.component';
 import { MailComponent } from './mail/mail.component';
 import { WeatherComponent } from './weather/weather.component';
 import { FlipkrtComponent } from './flipkrt/flipkrt.component';
+import { CreateVehicleComponent } from './create-vehicle/create-vehicle.component';
+import { CreateAccountComponent } from './create-account/create-account.component';
+import { StudentCardComponent } from './student-card/student-card.component';
+import { CreateUserComponent } from './create-user/create-user.component';
+
 
 
 
@@ -54,16 +59,19 @@ import { FlipkrtComponent } from './flipkrt/flipkrt.component';
   MailComponent,
   WeatherComponent,
   FlipkrtComponent,
+  CreateVehicleComponent,
+  CreateAccountComponent,
+  StudentCardComponent,
+  CreateUserComponent,
 
-
-
+ 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    
+    ReactiveFormsModule,
   ],
   providers: [],  
   bootstrap: [AppComponent]

@@ -17,84 +17,44 @@ import { FlipkartComponent } from './flipkart/flipkart.component';
 import { AccountComponent } from './account/account.component';
 import { MailComponent } from './mail/mail.component';
 import { WeatherComponent } from './weather/weather.component';
+import { CreateVehicleComponent } from './create-vehicle/create-vehicle.component';
+import { CreateAccountComponent } from './create-account/create-account.component';
+import { StudentCardComponent } from './student-card/student-card.component';
+import { CreateUserComponent } from './create-user/create-user.component';
 
+const routes: Routes = [
+  {
+    path: 'dashboard',
+    component: DashboardComponent,
+    children: [
+      { path: 'welcome', component: WelcomeComponent },
+      { path: 'Databinding', component: DatabindingComponent },
+      { path: 'flipkart', component: FlipkartComponent },
+      { path: 'account', component: AccountComponent },
+      { path: 'weather', component: WeatherComponent },
+      { path: 'mail', component: MailComponent },
+      { path: 'calculator', component: CalculatorComponent },
+      { path: 'rectangle', component: RectangleComponent },
+      { path: 'circle', component: CircleComponent },
+      { path: 'bmi', component: BmiComponent },
+      { path: 'employee', component: EmployeeComponent },
+      { path: 'directives', component: DirectivesComponent },
+      { path: 'emi', component: EmiComponent },
+      { path: 'vehicle', component: VehicleComponent },
+      { path: 'create-vehicle', component: CreateVehicleComponent },
+      {path:'create-account', component:CreateAccountComponent},
+      {path:'student-card', component:StudentCardComponent},
+      {path:'create-user', component:CreateUserComponent},
 
-
-
-const routes: Routes = [{path:'dashboard',component:DashboardComponent,children:[
-                            {path:'welcome',component:WelcomeComponent}
-                              ]},//parent routing
-  {path:'dashboard',component:DashboardComponent,children:[
-  {path:'Databinding',component:DatabindingComponent},]},
- 
-
-  {path:'dashboard',component:DashboardComponent,children:[
-    {path:'calculator',component:CalculatorComponent},
-  ]},
-
-  {path:'dashboard',component:DashboardComponent,children:[
-    {path:'rectangle',component:RectangleComponent}
-  ]},
-
-  {path:'dashboard',component:DashboardComponent,children:[
-    {path:'circle',component:CircleComponent}
-  ]},
-
-  {path:'dashboard',component:DashboardComponent,children:[
-    {path:'bmi',component:BmiComponent, },
-  ]},
-
-  {path:'dashboard',component:DashboardComponent,children:[
-    {path:'employee',component:EmployeeComponent, },
-  ]},
-
-  {path:'dashboard',component:DashboardComponent,children:[
-    {path:'directives',component:DirectivesComponent, },
-  ]},
-  // {path:'bmi',component:BmiComponent,children:[
-  //   {path:'bmi',component:BmiComponent, },
-  // ]},
-  {path:'dashboard',component:DashboardComponent,children:[
-    {path:'emi',component:EmiComponent, },
-  ]},
-
-
-  // {path:'dashboard',component:DashboardComponent,children:[
+    ],
+  }, 
   //   {path:'home',component:HomeComponent}
   // ]},
-  {path:'dashboard',component:DashboardComponent,children:[
-    {path:'vehicle', component:VehicleComponent},
-  ]},
-
-  {path:'dashboard',component:DashboardComponent,children:[
-    {path:'flipkart', component:FlipkartComponent},
-  ]},
-
-
-  {path:'dashboard',component:DashboardComponent,children:[
-    {path:'account',component:AccountComponent}
-  ]},
-  {path:'dashboard',component:DashboardComponent,children:[
-    {path:'weather',component:WeatherComponent}
-  ]},
-
-
-
-
-
-  {path:'dashboard',component:DashboardComponent,children:[
-    {path:'mail',component:MailComponent}
-  ]},
-
-
-
-
-  {path:'**',component:ErrorComponent},//wild-card componet
-
+  { path: '**', component: ErrorComponent }, //wild-card componet
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
