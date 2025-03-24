@@ -32,9 +32,6 @@ import { CreateAccountComponent } from './create-account/create-account.componen
 import { StudentCardComponent } from './student-card/student-card.component';
 import { CreateUserComponent } from './create-user/create-user.component';
 
-
-
-
 // import { EMIComponent } from './emi/emi.component';
 
 @NgModule({
@@ -61,10 +58,9 @@ import { CreateUserComponent } from './create-user/create-user.component';
   FlipkrtComponent,
   CreateVehicleComponent,
   CreateAccountComponent,
-  StudentCardComponent,
   CreateUserComponent,
+  StudentCardComponent,
 
- 
   ],
   imports: [
     BrowserModule,
