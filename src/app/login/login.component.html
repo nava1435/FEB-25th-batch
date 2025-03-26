@@ -1,3 +1,12 @@
 <!-- <p>login works!</p>
 <router-outlet></router-outlet> -->
 <button routerlink="/Dashboard">Click here to dashboard</button>
+<form [formGroup]="loginForm">
+<label >Email:</label>
+<input type="email" formControlName="email"><br>
+
+<label >Password:</label>
+<input type="password" formControlName="password"><br>
+<button class="btn btn-primary" (click)="login()">Login</button>
+
+</form>

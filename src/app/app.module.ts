@@ -13,7 +13,6 @@ import { DatabindingComponent } from './databinding/databinding.component';
 import { CalculatorComponent } from './calculator/calculator.component';
 import { RectangleComponent } from './rectangle/rectangle.component';
 import { CircleComponent } from './circle/circle.component';
-
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BmiComponent } from './bmi/bmi.component';
 import { EmiComponent } from './emi/emi.component';
@@ -31,6 +30,15 @@ import { CreateVehicleComponent } from './create-vehicle/create-vehicle.componen
 import { CreateAccountComponent } from './create-account/create-account.component';
 import { StudentCardComponent } from './student-card/student-card.component';
 import { CreateUserComponent } from './create-user/create-user.component';
+import { VehicleDetailsComponent } from './vehicle-details/vehicle-details.component';
+import { PracticeComponent } from './practice/practice.component';
+import { Sibling1Component } from './sibling1/sibling1.component';
+import { Sibling2Component } from './sibling2/sibling2.component';
+import { ParentComponent } from './parent/parent.component';
+import { ChildComponent } from './child/child.component';
+import { RatingComponent } from './rating/rating.component';
+import { CreateStudentComponent } from './create-student/create-student.component';
+
 
 // import { EMIComponent } from './emi/emi.component';
 
@@ -60,6 +68,14 @@ import { CreateUserComponent } from './create-user/create-user.component';
   CreateAccountComponent,
   CreateUserComponent,
   StudentCardComponent,
+  VehicleDetailsComponent,
+  PracticeComponent,
+  Sibling1Component,
+  Sibling2Component,
+  ParentComponent,
+  ChildComponent,
+  RatingComponent,
+  CreateStudentComponent,
 
   ],
   imports: [

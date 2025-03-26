@@ -21,12 +21,17 @@ import { CreateVehicleComponent } from './create-vehicle/create-vehicle.componen
 import { CreateAccountComponent } from './create-account/create-account.component';
 import { StudentCardComponent } from './student-card/student-card.component';
 import { CreateUserComponent } from './create-user/create-user.component';
+import { VehicleDetailsComponent } from './vehicle-details/vehicle-details.component';
+import { PracticeComponent } from './practice/practice.component';
+import { AuthenticationGuard } from './authentication.guard';
+import { Sibling1Component } from './sibling1/sibling1.component';
+import { ParentComponent } from './parent/parent.component';
+import { CreateStudentComponent } from './create-student/create-student.component';
 
 const routes: Routes = [
   {
     path: 'dashboard',
-    component: DashboardComponent,
-    children: [
+    component: DashboardComponent,canActivate:[AuthenticationGuard], children: [
       { path: 'welcome', component: WelcomeComponent },
       { path: 'Databinding', component: DatabindingComponent },
       { path: 'flipkart', component: FlipkartComponent },
@@ -44,12 +49,22 @@ const routes: Routes = [
       { path: 'create-vehicle', component: CreateVehicleComponent },
       {path:'create-account', component:CreateAccountComponent},
       {path:'student-card', component:StudentCardComponent},
-      {path:'create-user', component:CreateUserComponent},
+      {path:'create-student', component:CreateStudentComponent},
 
+
+      {path:'create-user', component:CreateUserComponent},
+      {path:'vehicle-details/:id', component:VehicleDetailsComponent},
+      {path:'edit-vehicle/:id', component:CreateVehicleComponent},
+      {path:'practice',component:PracticeComponent},
+      {path:'sibling',component:Sibling1Component},
+      {path:'parent',component:ParentComponent},
+      // {path:'home',component:HomeComponent},
     ],
   }, 
-  //   {path:'home',component:HomeComponent}
-  // ]},
+ 
+
+  {path:"",component:LoginComponent},
+  {path:"Sibling",component:LoginComponent},
   { path: '**', component: ErrorComponent }, //wild-card componet
 ];
 
@@ -58,3 +73,4 @@ const routes: Routes = [
   exports: [RouterModule],
 })
 export class AppRoutingModule {}
+
