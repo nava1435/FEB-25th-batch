@@ -19,7 +19,7 @@ import { EmiComponent } from './emi/emi.component';
 import { DirectivesComponent } from './directives/directives.component';
 import { EmployeeComponent } from './employee/employee.component';
 import { VehicleComponent } from './vehicle/vehicle.component';
-import{HttpClientModule} from "@angular/common/http";
+import{HTTP_INTERCEPTORS, HttpClientModule} from "@angular/common/http";
 import { FlipkartComponent } from './flipkart/flipkart.component';
 import { AccountService } from './account.service';
 import { AccountComponent } from './account/account.component';
@@ -38,6 +38,9 @@ import { ParentComponent } from './parent/parent.component';
 import { ChildComponent } from './child/child.component';
 import { RatingComponent } from './rating/rating.component';
 import { CreateStudentComponent } from './create-student/create-student.component';
+import { CapitalDirective } from './capital.directive';
+import { BalancePipe } from './balance.pipe';
+import { TokenInterceptor } from './token.interceptor';
 
 
 // import { EMIComponent } from './emi/emi.component';
@@ -76,6 +79,8 @@ import { CreateStudentComponent } from './create-student/create-student.componen
   ChildComponent,
   RatingComponent,
   CreateStudentComponent,
+  CapitalDirective,
+  BalancePipe,
 
   ],
   imports: [
@@ -85,7 +90,11 @@ import { CreateStudentComponent } from './create-student/create-student.componen
     HttpClientModule,
     ReactiveFormsModule,
   ],
-  providers: [],  
+  providers: [ {
+    provide:HTTP_INTERCEPTORS,
+    useClass:TokenInterceptor,
+    multi:true
+  }],  
   bootstrap: [AppComponent]
 })
 
