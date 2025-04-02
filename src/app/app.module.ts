@@ -41,6 +41,7 @@ import { CreateStudentComponent } from './create-student/create-student.componen
 import { CapitalDirective } from './capital.directive';
 import { BalancePipe } from './balance.pipe';
 import { TokenInterceptor } from './token.interceptor';
+import { AboutUsModule } from './about-us/about-us.module';
 
 
 // import { EMIComponent } from './emi/emi.component';
@@ -89,6 +90,7 @@ import { TokenInterceptor } from './token.interceptor';
     FormsModule,
     HttpClientModule,
     ReactiveFormsModule,
+    AboutUsModule,
   ],
   providers: [ {
     provide:HTTP_INTERCEPTORS,
