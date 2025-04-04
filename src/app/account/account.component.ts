@@ -7,12 +7,12 @@ import { AccountService } from '../account.service';
   styleUrls: ['./account.component.css'],
 })
 export class AccountComponent {
-  term: string = '';
+  term: string = '';//if not given the quotation it undefined 
   accounts: any = [];
 
   constructor(private _accountService: AccountService) {
     this.loadAccounts();
-    _accountService.getAccounts().subscribe(
+    _accountService.getAccounts().subscribe(//observable continues ga dataflow data vachaka subcribe lo capture cheyyadam
       (data: any) => {
         console.log(data);
         this.accounts = data;
@@ -26,11 +26,11 @@ export class AccountComponent {
 
   filter() {
     this._accountService.getFilterAccounts(this.term).subscribe(
-      (data: any) => {
-        console.log(data);
-        this.accounts = data;
+      (data: any) => {//this.term uses user adi type chesthe ha data ravadaniki 
+        console.log(data);//example this.term="iphone"api cal getfilteraccounts ("iphone")
+        this.accounts = data;//only iphone realated vsthai/okavela this.term lekapothe
       },
-      (err: any) => {
+      (err: any) => {//hanni products vasthayi
         alert('internal Server Error');
       }
     );
@@ -39,7 +39,7 @@ export class AccountComponent {
   column: string = '';
   order: string = '';
   sort() {
-    this._accountService.getSortedAccounts(this.column, this.order).subscribe(
+    this._accountService.getSortedAccounts(this.column,this.order).subscribe(
       (data: any) => {
         console.log(data);
         this.accounts = data;
